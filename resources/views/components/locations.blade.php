@@ -11,6 +11,6 @@
             </div>
         @endforeach
     @else
-        <div>Search a Location Below</div>
+        <div>Search a Location to Find Beaches</div>
     @endisset
 </div>

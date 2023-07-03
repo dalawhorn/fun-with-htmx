@@ -7,13 +7,6 @@
 
     <!--https://www.reddit.com/r/htmx/comments/usyzgn/django_htmx_and_leafletjs/-->
     <!--https://htmx.org/docs/#3rd-party-->
-    
-    <div id="locations">
-        <!-- <div data-searched data-lat="39.8355" data-lng="-99.0909">
-            Knoxville, TN
-        </div> -->
-        <x-locations :searched-location-name="$searched_location_name" :location-data="$location_data" />
-    </div>
 
     <form
         hx-get="/map"
@@ -22,6 +15,13 @@
         <button type="submit" name="location" value="Huntsville, AL">Search Beaches Near Huntsville, AL</button>
         <button type="submit" name="location" value="Knoxville, TN">Search Beaches Near Knoxville, TN</button>
     </form>
+    
+    <div id="locations">
+        <!-- <div data-searched data-lat="39.8355" data-lng="-99.0909">
+            Knoxville, TN
+        </div> -->
+        <x-locations :searched-location-name="$searched_location_name" :location-data="$location_data" />
+    </div>
 
     <div id="map"></div>
 
