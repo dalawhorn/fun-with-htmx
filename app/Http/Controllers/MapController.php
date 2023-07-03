@@ -39,7 +39,9 @@ class MapController extends Controller
             }
         }
 
-        if($request->header('HX-Request', false)) {
+        $is_htmx_request = $request->header('HX-Request', false);
+        
+        if($is_htmx_request) {
             return view('components.locations', ['searchedLocationName' => $location, 'locationData' => $location_data]);
         } 
         else {
