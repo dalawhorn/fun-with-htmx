@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodosController;
+use App\Http\Controllers\MapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,6 @@ Route::resource('/todos', TodosController::class)->only(['index', 'store']);
 Route::post('/clicked', function() {
     return view('button-click');
 });
+
+Route::get('/map', [MapController::class, 'index']);
+Route::post('/map/hsv', [MapController::class, 'hsv']);
